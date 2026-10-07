@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electroerosionado y Maquinado de Alta Precisión | Querétaro</title>
+    <style>
+        :root {
+            --bg-dark: #1e1e1e;
+            --bg-card: #262626;
+            --accent-green: #00ce53;
+            --text-light: #ffffff;
+            --text-gray: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Encabezado */
+        header {
+            background: rgba(30, 30, 30, 0.95);
+            border-bottom: 3px solid var(--accent-green);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: var(--text-light);
+        }
+
+        .logo-text span {
+            color: var(--accent-green);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1ebd54;
+        }
+
+        /* Sección Hero */
+        .hero {
+            background: linear-gradient(rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.9)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px 10% 80px;
+            border-bottom: 1px solid #333;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            color: var(--accent-green);
+        }
+
+        .hero .slogan {
+            font-style: italic;
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .hero p.intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            color: #dddddd;
+        }
+
+        .btn-cta {
+            background: var(--accent-green);
+            color: #000;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn-cta:hover {
+            background: #00aa44;
+            color: #fff;
+        }
+
+        /* Contenedor General */
+        .container {
+            padding: 60px 8%;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-green);
+            margin: 10px auto 0;
+        }
+
+        /* Grid de Maquinaria */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border-top: 4px solid var(--accent-green);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-number {
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .card h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card p {
+            color: var(--text-gray);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .specs {
+            margin-top: 15px;
+            background: rgba(0,0,0,0.2);
+            padding: 10px;
+            border-left: 3px solid var(--accent-green);
+            font-family: monospace;
+            color: #fff;
+        }
+
+        /* Sección Información de Contacto */
+        .footer-info {
+            background: #141414;
+            padding: 60px 8%;
+            border-top: 3px solid var(--accent-green);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--accent-green);
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col p {
+            color: #cccccc;
+            margin: 10px 0;
+        }
+
+        .footer-col a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-green);
+        }
+
+        .bottom-bar {
+            text-align: center;
+            padding: 20px 0 0 0;
+            margin-top: 40px;
+            border-top: 1px solid #222;
+            color: var(--text-gray);
+            font-size: 0.85rem;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            .hero h1 { font-size: 2rem; }
+            .container { padding: 40px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <header>
+        <div class="logo-text">ELECTRO<span>EROSIONADO</span></div>
+        <a href="https://wa.me" class="btn-whatsapp" target="_blank">🟢 WhatsApp: 442 279 6646</a>
+    </header>
+
+    <!-- Sección Principal (Hero) -->
+    <section class="hero">
+        <h1>ELECTRO<span>EROSIONADO</span></h1>
+        <div class="slogan">"Donde la chispa crea exactitud."</div>
+        <p class="intro">
+            Somos un taller metalmecánico de alta precisión en Querétaro especializado en procesos de manufactura avanzada y diseño CAD. Transformamos energía eléctrica en microdescargas controladas para lograr cortes complejos en materiales de extrema dureza, imposibles de realizar con herramientas convencionales.
+        </p>
+        <a href="mailto:ggalloje@gmail.com" class="btn-cta">Cotizar Proyecto / Enviar STEP</a>
+    </section>
+
+    <!-- Sección de Capacidad Instalada -->
+    <section class="container">
+        <h2>Nuestra Capacidad Instalada</h2>
+        <div class="grid">
+            
+            <!-- 01 Fresadora -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-number">01</div>
+                    <h3>Fresadora</h3>
+                    <p>Ideal para desbaste, preparación de bloques y operaciones tradicionales de maquinado con excelente estabilidad.</p>
+                    <div class="specs">Bancada: 12" x 50"</div>
+                </div>
+            </div>
+
+            <!-- 02 Rectificadora Plana -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-number">02</div>
+                    <h3>Rectificadora Plana</h3>
+                    <p>Acabados de superficie planos perfectos y control estricto de espesores finales en placas de herramental.</p>
+                    <div class="specs">Bancada: 12" x 50"</div>
+                </div>
+            </div>
+
+            <!-- 03 Rectificadora Cilíndrica -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-number">03</div>
+                    <h3>Rectificadora Cilíndrica</h3>
+                    <p>Ajuste de diámetros exteriores con tolerancias micrométricas en ejes, pernos e insertos redondos.</p>
+                    <div class="specs">Capacidad: 8" de Diámetro x 20" de largo</div>
+                </div>
+            </div>
+
+            <!-- 04 EDM de Hilo Charmilles 290 -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-number">04</div>
+                    <h3>EDM de Hilo (Robofil 290)</h3>
+                    <p>Precisión suiza para el corte de matrices robustas, piezas medianas-grandes y geometrías intrincadas de alta fidelidad.</p>
+                    <div class="specs">Bancada Eje X: 15" | Eje Y: 9.5" | Eje Z: 7.5"</div>
+                </div>
+            </div>
+
+            <!-- 05 EDM de Hilo Charmilles 200 -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-number">05</div>
+                    <h3>EDM de Hilo (Robofil 200)</h3>
+                    <p>Configuración ágil y ultra-precisión para punzones micrométricos, insertos complejos y ranuras de ajuste fino.</p>
+                    <div class="specs">Eje X: 15" | Eje Y: 8.5" | Eje Z: 6"</div>
+                </div>
+            </div>
+
+            <!-- 06 Fresadora Perfiladora -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-number">06</div>
+                    <h3>Fresadora Perfiladora</h3>
